@@ -67,3 +67,9 @@ main {
   color: red;
   font-size: 30px;
 }
+
+.new-hr{
+  border-color: blue;
+  border-width: 5px;
+  border-style: double;
+}
