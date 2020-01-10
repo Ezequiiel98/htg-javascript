@@ -74,6 +74,10 @@ main {
   border-style: double;
 }
 
+.comment-warning{
+  background-color: yellow;
+}
+
 .comment-hidden{
   display: none;
 }
