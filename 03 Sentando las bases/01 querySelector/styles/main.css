@@ -73,3 +73,7 @@ main {
   border-width: 5px;
   border-style: double;
 }
+
+.comment-hidden{
+  display: none;
+}

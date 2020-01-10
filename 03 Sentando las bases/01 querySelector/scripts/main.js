@@ -13,3 +13,14 @@ const hrs = document.querySelectorAll('hr');
 for(let i=0; i < hrs.length; i++){
     hrs[i].classList.add('new-hr');
 }
+
+
+/* EJERCICIO 3*/
+
+const comentarios  = document.querySelectorAll('.comment--text');
+
+for(let i = 0; i < comentarios.length; i++){
+    if(comentarios[i].textContent.length > 50){
+        comentarios[i].classList.add('comment-hidden');
+    }
+}
