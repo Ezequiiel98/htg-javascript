@@ -15,16 +15,13 @@ for(let i=0; i < hrs.length; i++){
 }
 
 
-/* EJERCICIO 3 y 4 */
+/* EJERCICIO 3 */
 
 
 const comentarios  = document.querySelectorAll('.comment--text');
 
 for(let i = 0; i < comentarios.length; i++){
-    if(comentarios[i].textContent.length > 150){
-        comentarios[i].classList.add('comment-hidden');
-        
-    }else if(comentarios[i].textContent.length > 50){
+   if(comentarios[i].textContent.length > 50){
         comentarios[i].classList.add('comment-warning');
         comentarios[i].innerHTML += '<p>Comentario de mas de 50 caracteres</p>';
 }
