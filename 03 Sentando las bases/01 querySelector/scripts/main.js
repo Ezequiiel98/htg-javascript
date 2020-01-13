@@ -15,15 +15,28 @@ for(let i=0; i < hrs.length; i++){
 }
 
 
-/* EJERCICIO 3 */
-
+/* EJERCICIO 4 */
 
 const comentarios  = document.querySelectorAll('.comment--text');
 
-for(let i = 0; i < comentarios.length; i++){
-   if(comentarios[i].textContent.length > 50){
-        comentarios[i].classList.add('comment-warning');
-        comentarios[i].innerHTML += '<p>Comentario de mas de 50 caracteres</p>';
-}
+function comentarioMasLargo(listaElementos){
+
+    let comentarioMasLargo = listaElementos[0];
+
+
+ for(let i = 0; i < listaElementos.length; i++){
+    
+    if(comentarioMasLargo.textContent.length < listaElementos[i].textContent.length){
+
+        comentarioMasLargo = listaElementos[i]
+    }
+
+ }
+
+  return comentarioMasLargo
 
 }
+
+
+
+
