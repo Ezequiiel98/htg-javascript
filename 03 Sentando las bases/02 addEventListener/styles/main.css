@@ -50,6 +50,8 @@ a {
   display: flex;
   margin-bottom: 20px;
   position: relative;
+  flex-wrap: wrap;
+  
 }
 
 .input-wrapper .text-area {
@@ -108,4 +110,27 @@ a {
     --font-color: #AAA;
     --link-color: #65C8BC;
   }
+}
+
+
+
+.input-error{
+  border-color: red;
+}
+
+.input-error:focus{
+  outline-color: red}
+
+.mensaje-error{
+   min-width: 100%;
+   color: red;
+}
+
+
+.oculto{
+  display: none;
+}
+
+.error{
+  color:red;
 }

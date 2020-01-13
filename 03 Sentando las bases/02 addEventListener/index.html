@@ -57,14 +57,19 @@
         <br />
         <form id="contacto" class="form">
           <div class="input-wrapper">
-            <label class="input-label input-label__small" for="input-nombre">Nombre</label>
+            <label class="input-label input-label__small input-label-nombre" for="input-nombre">Nombre</label>
+
             <input class="text-input" type="text" name="nombre" id="input-nombre">
+            
+            <p class="mensaje-error oculto">El nombre debe tener entre 4 a 50 caracteres</p>
           </div>
           <div class="input-wrapper">
             <label class="input-label input-label__small" for="input-solucion">Ideas</label>
             <textarea class="text-input text-area" type="text" name="solucion" id="input-solucion"></textarea>
           </div>
           <button class="primary-btn" type="submit" id="btn-enviar">ENVIAR</button>
+          <p class="mensaje-form oculto">El formulario se envio correctamente</p>
+          <p></p>
         </form>
       </section>
     </main>
