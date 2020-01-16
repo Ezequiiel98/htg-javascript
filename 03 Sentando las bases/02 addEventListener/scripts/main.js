@@ -11,17 +11,16 @@ const inputSolucion = document.querySelector('#input-solucion');
 //ejercicio 2
 function formularioEnviado(event) {
   event.preventDefault();
-  // ejercicio 2 
 
+  // ejercicio 2 
   mensajeForm.classList.remove('oculto');
 
-
-
  // ejercicio 3 
-
   // creo elementos html
  let nombre = document.createElement('p');
  let solucion = document.createElement('p');
+ let hr = document.createElement('hr');
+
 
  // accedo al elemento padre del form porque lo necesito para usar el insertBefore
  let padreForm = formulario.parentNode;
@@ -38,7 +37,8 @@ function formularioEnviado(event) {
  // inserto nombre y solucion  antes de formulario
  padreForm.insertBefore(nombre, formulario);
  padreForm.insertBefore(solucion, formulario);  
- 
+ padreForm.insertBefore(hr, formulario);  
+
 
   // vacio los inputs 
   inputNombre.value = '';
@@ -46,21 +46,32 @@ function formularioEnviado(event) {
 } 
 
 
+
+// deshabilito el boton para enviar
+btnEnviar.disabled = true;
+
 //ejercicio 1
 function interceptarNombre(event) {
    let nombre = '';
    nombre += event.target.value;
    // si el nombre es menor igual a cuatro y mayor o igual a 50 el agrego el error
-   if(nombre.length <= 4 || nombre.length >= 50){
+   if( nombre.length < 4 || nombre.length > 50){
      inputNombre.classList.add('input-error');
      mensajeError.classList.remove('oculto');
      labelNombre.classList.add('error');
+
+     // deshabilito el boton para enviar
+     btnEnviar.disabled = true;
+
    }else{
      // y aca le borro el error porqeu estaria en rango
      inputNombre.classList.remove('input-error');
      mensajeError.classList.add('oculto');
      labelNombre.classList.remove('error');
-    
+
+     // habilito el botton  
+     btnEnviar.disabled = false;
+
      }
 
 
@@ -73,3 +84,15 @@ formulario.addEventListener('submit', formularioEnviado);
 inputNombre.addEventListener('input', interceptarNombre);
                                    
 
+document.addEventListener("mousemove", mouse);
+
+
+let cursor = document.querySelector('#cursor')
+
+function mouse(event){
+  let top = event.screenY - 50;
+  let left = event.screenX - 15 
+  cursor.style.left = left + 'px';
+
+  cursor.style.top = top + 'px';
+}

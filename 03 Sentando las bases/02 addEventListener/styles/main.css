@@ -112,7 +112,9 @@ a {
   }
 }
 
-
+#contacto{
+  margin-top: 35px;
+}
 
 .input-error{
   border-color: red;
@@ -133,4 +135,13 @@ a {
 
 .error{
   color:red;
+}
+
+#cursor{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+ background-color: rgba(255, 0, 0, 0.534);
+  position: fixed;
+  z-index: 5;
 }
